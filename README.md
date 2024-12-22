@@ -4,7 +4,7 @@ This repository contains my solutions for the projects completed as part of the 
 
 According to freeCodeCamp, "The Scientific Computing with Python (Beta) curriculum will equip you with the skills to analyze and manipulate data using Python, a powerful and versatile programming language. You'll learn key concepts like data structures, algorithm, Object Oriented Programming, and how to perform complex calculations using a variety of tools."
 
-## Projects List
+## Course Projects
 
 Here are the individual projects from the course that you can find in this repository:
 
