@@ -19,6 +19,7 @@ def arithmetic_arranger(problems, show_answers=False):
         if not (first_operand.isdigit() and second_operand.isdigit()): 
             return "Error: Numbers must only contain digits."
             #raise ValueError("Numbers must only contain digits.")
+            
         if len(first_operand) > 4 or len(second_operand) > 4:
             return "Error: Numbers cannot be more than four digits."
             #raise ValueError("Numbers cannot be more than four digits")
@@ -30,16 +31,14 @@ def arithmetic_arranger(problems, show_answers=False):
         first_line += first_operand.rjust(max_len) + blank_space
         second_line += operator + ' ' + second_operand.rjust(max_len - 2) + blank_space
         dash_line += '-' * max_len + blank_space
+
         if show_answers:
             answer_line += answer.rjust(max_len) + blank_space
 
-        arranged_problems = f"{first_line}\n{second_line}\n{dash_line}"  
+        arranged_problems = f"{first_line.rstrip()}\n{second_line.rstrip()}\n{dash_line.rstrip()}"  
 
     if show_answers:
-        arranged_problems += f"\n{answer_line}"
+        arranged_problems += f"\n{answer_line.rstrip()}"
        
     problems = arranged_problems
     return problems
-
-print(f'\n{arithmetic_arranger(["32 + 698", "3801 - 2", "45 + 43", "123 + 49"])}')
-print(f'\n{arithmetic_arranger(["32 + 698", "3801 - 2", "45 + 43", "123 + 49"],True)}')
