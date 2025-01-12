@@ -45,6 +45,9 @@ def add_hours(start_time, duration_time, new_time):
 def calculate_new_weekday(start_day, days_later):
     if start_day:
         days_of_the_week = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+        if start_day.capitalize() not in days_of_the_week: 
+            print('You inserted an invalid day of the week, it will be ignored in the calculation')
+            return
         start_day_index = days_of_the_week.index(start_day.capitalize())
         new_day_index = (start_day_index + days_later) % len(days_of_the_week)
         return days_of_the_week[new_day_index]
@@ -53,7 +56,6 @@ def calculate_new_weekday(start_day, days_later):
 def format_new_time(new_time):
     if new_time['hours'] >= 12:
         new_time['period'] = 'PM'
-    if new_time['hours'] > 12: 
         new_time['hours'] -= 12
     if new_time['hours'] == 0: 
         new_time['hours'] = 12
@@ -75,3 +77,7 @@ def add_time(start, duration, start_day = None):
     new_time = add_hours(start_time, duration_time, new_time)
     new_time['weekday'] = calculate_new_weekday(start_day, new_time['days_later'])
     return format_new_time(new_time)
+
+print(add_time("6:00 AM", "93:00", "Monday"))
+
+
