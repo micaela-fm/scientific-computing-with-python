@@ -11,7 +11,7 @@ Here are the individual projects from the course that you can find in this repos
 1. **Arithmetic Formatter**  
    A project where you format arithmetic expressions in a readable way, taking inputs and ensuring the layout is aligned correctly.
 
-2. **Time Calculator** (coming soon)  
+2. **Time Calculator**  
    A program to calculate the difference between two times, including edge cases such as days, weeks, and time zones.
 
 3. **Budget App** (coming soon)  
