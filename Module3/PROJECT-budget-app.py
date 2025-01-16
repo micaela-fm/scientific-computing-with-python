@@ -66,13 +66,65 @@ class Category:
 
 
 def create_spend_chart(categories):
-    pass
+    spendings = {}
+    percentages = {}
+    total_spendings = 0
+    for category in categories: 
+        spendings[category.name] = sum(abs(entry['amount']) if entry['amount'] < 0 else 0 for entry in category.ledger)
+        total_spendings += spendings[category.name]
+    for category in categories: 
+        percentages[category.name] = (spendings[category.name] / total_spendings) * 100
+
+    #print(spendings) 
+    #print(total_spendings)
+    #print(percentages)
+
+    chart = 'Percentage spent by category' + '\n'
+    for percentage in range(100, -1, -10): 
+        chart += f"{str(percentage).rjust(3)}|"
+        for category in categories: 
+            if percentages[category.name] >= percentage: 
+                chart += " o "
+            else:
+                chart += "   "
+        chart += " \n"
+    
+    chart += " " * 4 + "-" + "---" * len(categories) + "\n"
+
+    longest_name_length = max(len(category.name) for category in categories)
+    for i in range(longest_name_length):
+        chart += " " * 5
+        for category in categories:
+            if i < len(category.name):
+                chart += category.name[i] + "  "
+            else:
+                chart += "   "
+        chart += "\n"
+
+    return chart.rstrip("\n")
 
 
 food = Category('Food')
 food.deposit(1000, 'deposit')
 food.withdraw(10.15, 'groceries')
 food.withdraw(15.89, 'restaurant and more food for dessert')
+
 clothing = Category('Clothing')
+clothing.deposit(500, 'deposit')
+clothing.withdraw(50.00, 'jeans')
+clothing.withdraw(25.55, 't-shirt')
+
+entertainment = Category('Entertainment')
+entertainment.deposit(300, 'deposit')
+entertainment.withdraw(45.67, 'movie tickets')
+entertainment.withdraw(89.99, 'concert tickets')
+
+utilities = Category('Utilities')
+utilities.deposit(400, 'deposit')
+utilities.withdraw(100.00, 'electricity bill')
+utilities.withdraw(50.00, 'water bill')
+
 food.transfer(50, clothing)
-print(food)
+clothing.transfer(20, entertainment)
+
+print(create_spend_chart([food, clothing, entertainment, utilities]))
