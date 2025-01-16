@@ -9,7 +9,9 @@ class Category:
         for entry in self.ledger: 
             # The first 23 characters of the description should be displayed, then the amount.
             # The amount should be right aligned, contain two decimal places, and display a maximum of 7 characters.
-            budget_string += entry['description'][:23] + str(entry['amount']) + "\n"
+            description = entry['description'][:23]
+            amount = "{:>7.2f}".format(entry['amount'])
+            budget_string += f"{description:<23}{amount}\n"        
         # A line displaying the category total.
         budget_string += 'Total: ' + str(self.get_balance())
         return budget_string
