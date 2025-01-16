@@ -14,7 +14,7 @@ Here are the individual projects from the course that you can find in this repos
 2. **Time Calculator**  
    A program to calculate the difference between two times, including edge cases such as days, weeks, and time zones.
 
-3. **Budget App** (coming soon)  
+3. **Budget App**   
    A simple budget calculator that tracks and categorizes expenses and income.
 
 4. **Polygon Area Calculator** (coming soon)  
