@@ -22,3 +22,5 @@ Here are the individual projects from the course that you can find in this repos
 
 5. **Probability Calculator** (coming soon)  
    This project implements a probability calculator that simulates drawing balls from a hat and calculates the probability of drawing a specific combination of balls. 
+
+Each module also contains the solutions to the exercises provided as preparation for the projects. 
