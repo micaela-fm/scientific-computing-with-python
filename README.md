@@ -12,13 +12,13 @@ Here are the individual projects from the course that you can find in this repos
    A project where you format arithmetic expressions in a readable way, taking inputs and ensuring the layout is aligned correctly.
 
 2. **Time Calculator**  
-   A program to calculate the difference between two times, including edge cases such as days, weeks, and time zones.
+   A program to calculate the difference between two times, including edge cases such as days.
 
 3. **Budget App**   
    A simple budget calculator that tracks and categorizes expenses and income.
 
 4. **Polygon Area Calculator**   
-   An application that calculates the area of various polygons (triangles, rectangles, etc.) using Python classes and methods.
+   An application that draws and calculates the area and other properties of rectangles and squares using Python classes and methods.
 
 5. **Probability Calculator** (coming soon)  
    This project implements a probability calculator that simulates drawing balls from a hat and calculates the probability of drawing a specific combination of balls. 
