@@ -17,7 +17,7 @@ Here are the individual projects from the course that you can find in this repos
 3. **Budget App**   
    A simple budget calculator that tracks and categorizes expenses and income.
 
-4. **Polygon Area Calculator** (coming soon)  
+4. **Polygon Area Calculator**   
    An application that calculates the area of various polygons (triangles, rectangles, etc.) using Python classes and methods.
 
 5. **Probability Calculator** (coming soon)  
