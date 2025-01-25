@@ -20,7 +20,7 @@ Here are the individual projects from the course that you can find in this repos
 4. **Polygon Area Calculator**   
    An application that draws and calculates the area and other properties of rectangles and squares using Python classes and methods.
 
-5. **Probability Calculator** (coming soon)  
+5. **Probability Calculator**   
    This project implements a probability calculator that simulates drawing balls from a hat and calculates the probability of drawing a specific combination of balls. 
 
 Each module also contains the solutions to the exercises provided as preparation for the projects. 
